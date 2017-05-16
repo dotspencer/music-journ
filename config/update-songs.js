@@ -30,13 +30,10 @@ function updateSongList(html){
   // Turn into JSON array
   for(var i = 1; i < lines.length; i++){
     var parts = lines[i].split(',');
-    var title = parts[0];
-    var id = parts[1];
-    var date = parts[2];
     songs.push({
-      title: title,
-      id: id,
-      date: date
+      title: parts[0].trim(),
+      id: parts[1].trim(),
+      date: parts[2].trim()
     });
   }
 
