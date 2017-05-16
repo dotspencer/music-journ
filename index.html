@@ -5,11 +5,18 @@
     <title>Music Mode</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
-    <script src="/js/controllers.js"></script>
+    <script src="/js/controllers/app.js"></script>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <ul class="song-list" ng-controller="List">
-      <li ng-repeat="song in songs | orderBy: 'date'">{{song.title}}</li>
+    <div class="content">
+      <div class="song-list" ng-controller="List">
+        <div ng-repeat="song in songs | orderBy: 'date'" class="song">
+          <div class="thumb" style="background-image: url({{song.id | ytImage}})"></div>
+          <div class="title">{{song.title}}</div>
+          <div class="date">{{song.date | localDate}}</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
