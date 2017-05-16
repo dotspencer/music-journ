@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div class="" ng-controller="Demo">
-      <p>{{info.name}}</p>
+    <ul class="song-list" ng-controller="List">
+      <li ng-repeat="song in songs | orderBy: 'date'">{{song.title}}</li>
   </body>
 </html>

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update-songs": "node ./config/update-songs.js"
+    "update-songs": "node ./config/update-songs.js",
+    "dev": "gulp"
   },
   "author": "",
   "license": "ISC",
