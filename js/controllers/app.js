@@ -7,6 +7,7 @@ app.controller('List', function($scope, $http){
     }
     $scope.songs = data;
   });
+
 });
 
 app.filter('localDate', function(){

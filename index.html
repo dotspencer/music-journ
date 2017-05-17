@@ -11,7 +11,7 @@
   <body>
     <div class="content">
       <div class="song-list" ng-controller="List">
-        <div ng-repeat="song in songs | orderBy: 'date'" class="song">
+        <div ng-repeat="song in songs | orderBy: 'date':'reversed' | filter: filter" class="song">
           <div class="thumb" style="background-image: url({{song.id | ytImage}})"></div>
           <div class="title">{{song.title}}</div>
           <div class="date">{{song.date | localDate}}</div>
