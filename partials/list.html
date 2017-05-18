@@ -1,5 +1,8 @@
+<h1>Song List</h1>
 <div class="song-list">
-  <a ng-repeat="song in songs | orderBy: 'date':'reversed' | filter: filter" href="https://dotspencer.github.io/music-mode/?id={{song.id}}" class="song">
+  <a  ng-repeat="song in songs | orderBy: 'date':'reversed' | filter: filter"
+      href="#/player/{{song.id}}"
+      class="song">
     <div class="thumb" style="background-image: url({{song.id | ytImage}})"></div>
     <div class="title">{{song.title}}</div>
     <div class="date">{{song.date | localDate}}</div>

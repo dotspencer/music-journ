@@ -10,8 +10,9 @@ app.config(['$routeProvider', function($routeProvider){
     templateUrl: 'partials/list.html',
     controller: 'List'
   })
-  .when('/settings', {
-    templateUrl: 'partials/settings.html'
+  .when('/player/:vid', {
+    templateUrl: 'partials/player.html',
+    controller: 'Player'
   })
   .otherwise({
     redirectTo: '/list'
