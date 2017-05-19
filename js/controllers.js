@@ -10,6 +10,7 @@ control.controller('List', ['$scope', '$http', function($scope, $http){
   });
 }]);
 
-control.controller('Player', ['$scope', '$routeParams', function($scope, $routeParams){
+control.controller('Player', ['$scope', '$routeParams', '$sce', function($scope, $routeParams, $sce){
   $scope.vid = $routeParams.vid;
+  $scope.vidUrl = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + $scope.vid + '?rel=0');
 }]);
